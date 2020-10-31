@@ -82,10 +82,8 @@ namespace n.work
       {
         ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
       });
-      app.UseHttpsRedirection();
 
       app.UseRouting();
-      app.UseAuthorization();
       app.UseAuthorization();
 
       app.UseEndpoints(endpoints =>
