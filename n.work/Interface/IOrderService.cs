@@ -11,7 +11,7 @@ namespace n.work.Interface
 {
   public interface IOrderService
   {
-    Task<OrderDetail> CreateOrder(RequestOrder requestOrder, int customerId);
+    OrderDetail CreateOrder(RequestOrder requestOrder, int customerId);
   }
   public class OrderService : BaseService, IOrderService
   {
@@ -26,7 +26,7 @@ namespace n.work.Interface
       this.context = context;
     }
 
-    public async Task<OrderDetail> CreateOrder(RequestOrder requestOrder,int customerId)
+    public OrderDetail CreateOrder(RequestOrder requestOrder,int customerId)
     {
       var newActivity = new OrderDetail()
       {

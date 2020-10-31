@@ -39,7 +39,7 @@ namespace n.work.Interface
       var authorizationString = getTokenFromAuthorization(authorization);
       var tokenContent = readTokenAuthenticate(authorizationString);
       var userID = tokenContent.userId;
-      var profile = GetUser(userID).Result;
+      var profile = GetUser(userID);
 
       var responseHome = new GetStarted()
       {
@@ -49,7 +49,7 @@ namespace n.work.Interface
       return responseHome;
     }
 
-    public async Task<Profile> GetUser(int userId)
+    public Profile GetUser(int userId)
     {
       var account = context.Profile.FirstOrDefault(profile => profile.AccountId == userId);
       return account;

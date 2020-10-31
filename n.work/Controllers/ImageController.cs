@@ -13,12 +13,12 @@ namespace n.work.Controllers
   public class ImageController : BaseApiController
   {
 
-    private readonly IHostingEnvironment _environment;
+    private readonly IWebHostEnvironment _environment;
 
 
     private readonly DatabaseContext context;
 
-    public ImageController(DatabaseContext _context, IHostingEnvironment IHostingEnvironment)
+    public ImageController(DatabaseContext _context, IWebHostEnvironment IHostingEnvironment)
     {
       context = _context;
       _environment = IHostingEnvironment;

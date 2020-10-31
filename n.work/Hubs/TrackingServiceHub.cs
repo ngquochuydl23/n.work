@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using System.Web.Http;
 using Microsoft.AspNetCore.SignalR;
 using Microsoft.Extensions.Options;
 using n.work.DataContext;

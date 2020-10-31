@@ -10,7 +10,7 @@ namespace n.work.Interface
 {
   public interface INotificationService
   {
-    Task<bool> SendPushNotification(string[] deviceTokens, string title, string body, object data);
+    bool SendPushNotification(string[] deviceTokens, string title, string body, object data);
   }
 
   public class NotificationService : INotificationService
@@ -30,9 +30,9 @@ namespace n.work.Interface
       this.context = context;
     }
 
-    public async Task<bool> SendPushNotification(string[] deviceTokens, string title, string body, object data)
+    public bool SendPushNotification(string[] deviceTokens, string title, string body, object data)
     {
-      throw new NotImplementedException();
+      return false;
     }
   }
 
